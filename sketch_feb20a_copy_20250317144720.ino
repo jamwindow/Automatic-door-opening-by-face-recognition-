@@ -1,5 +1,4 @@
 #include <Adafruit_NeoPixel.h>
-#include <DHT20.h>
 #include <LiquidCrystal_I2C.h>;
 #include <WiFi.h>               // For connecting to Wi-Fi
 #include <AdafruitIO_WiFi.h>     // For Adafruit IO
@@ -46,8 +45,8 @@ void setup() {
   lcd.begin();
   pixels5.begin();
 
-  myservo.setPeriodHertz(100);    // standard 50 hz servo
-	myservo.attach(P4, 500, 2400); // attaches the servo on pin P4 to the servo object
+  myservo.setPeriodHertz(100);    
+	myservo.attach(P4, 500, 2400); 
 
   // Connect to Adafruit IO
   Serial.print("Connecting to Adafruit IO...");
@@ -117,30 +116,12 @@ void handleMessageButton(AdafruitIO_Data *data) {
 void TaskIdentity(void *pvParameters){
   while(1){
     if (Name == "Unknown Person"){
-      
-        // ButtonFlag = false;
-        // ButtonFeed->save("OFF"); 
-        // Serial.printf("Button is OFF");       
-
-
-        Serial.println("this picture is unknow");
-
         lcd.clear();
         lcd.setCursor(0, 0);
         lcd.print("Error: Cannot");
         lcd.setCursor(0, 1);
         lcd.print("Detect face");
     }else if (Name != "Test"){
-
-        // ButtonFlag = true;
-        // ButtonFeed->save("ON");
-        // Serial.printf("Button is ON");       
-
-
-
-
-        Serial.println("this picture is someone");
-
         lcd.clear();
         lcd.setCursor(0, 0);
         lcd.print("Welcome Home");
