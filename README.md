@@ -38,3 +38,9 @@ The library for the Python:
 - pillow ->10.4.0
 - tensorflow -> 2.13.0
 - wheel -> 0.45.1
+
+6. License
+- This project is for educational purposes. You are free to use, fork, or improve with credit.
+
+✅ Feel free to fork, modify, and build upon this project!
+
