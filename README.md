@@ -6,6 +6,20 @@
 
 - This is a downgrade version of my group project. I work on yolobit to receive and publish data to adafruit io. the others members work on web.
 
+## System Components
+
+**Hardware:**
+- Yolobit (ESP32)
+- Servo motor (door mechanism)
+- Button for manual triggering
+- House model for demonstration
+
+**Software & Tools:**
+- Python (OpenCV, TensorFlow, Flask, MQTT)
+- Arduino (ESP32)
+- Adafruit IO for MQTT broker and dashboard
+- Teachable Machine for training the face recognition model
+
 2. How to run
 - step 1: download the code and required Library.
 - step 2: set up yolo-bit and a house model.
@@ -15,7 +29,6 @@
 3. Adafruit io
 
 4. Demo video
-
 
 5. Required library
 The library for Arduino:
